@@ -1,0 +1,33 @@
+version: "3.2"
+
+services: 
+    db:
+        container_name: db
+        image: mongo:4.2.2
+        restart: always
+        ports: 
+            - ${DB_PORT}:27017
+        environment:
+            MONGO_INITDB_DATABASE: shorten_url
+
+    api:
+        container_name: api
+        image: node:12.14
+        restart: always
+        depends_on:
+            - db
+        environment:
+            - DB_HOST=db
+        env_file:
+            - .env        
+        ports:
+            - ${SERVER_PORT}:${SERVER_PORT}
+        volumes:
+            - .:/usr/src/app
+        working_dir: /usr/src/app
+        command: npm start
+        logging:
+            driver: "json-file"
+            options:
+              max-size: "5m"
+              max-file: "5"
