@@ -9,7 +9,7 @@
 
 ### Inicializando o Banco de Dados
 
-O banco de dados para a aplicação é o [MongoDB](https://www.mongodb.com?target=_blank), para inicializá-lo é preciso executar o comando `mongod` em um terminal separado.
+O banco de dados para a aplicação é o [MongoDB](https://www.mongodb.com), para inicializá-lo é preciso executar o comando `mongod` em um terminal separado.
 
 ### Rodando a API
 
@@ -95,7 +95,7 @@ Os testes foram realizados com o framework Mocha e a _lib_ Chai, o código está
 
 ### Client para a API
 
-O cliente da API foi desenvolvido com React, acesse o repositório [aqui](https://github.com/marciofernandonet/shorten-app?target=_blank). e siga as instruções:
+O cliente da API foi desenvolvido com React, acesse o repositório [aqui](https://github.com/marciofernandonet/shorten-app). e siga as instruções:
 
 1. Faça o clone do projeto;
 2. Entre na pasta e instale as dependências com `npm install`;
