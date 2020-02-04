@@ -23,7 +23,7 @@ module.exports = {
             return res.status(201).json(newSht);
         }
         catch(err){
-            return res.status(500).send(error);
+            return res.status(500).send(err);
         }
     },
 
@@ -39,7 +39,7 @@ module.exports = {
             return res.status(200).redirect(result.urlOrig);
         }
         catch(err){
-            return res.status(500).send(error);
+            return res.status(500).send(err);
         }
     }, 
 
@@ -65,7 +65,7 @@ module.exports = {
             return res.status(200).json(result);
         } 
         catch(err){
-            return res.status(500).send(error);
+            return res.status(500).send(err);
         }    
     }
 }
