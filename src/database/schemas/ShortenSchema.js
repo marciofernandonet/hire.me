@@ -32,4 +32,4 @@ ShortenSchema.post('save', function() {
     }
 });
 
-module.exports = mongoose.model('Shorten', ShortenSchema);
+module.exports = ShortenSchema;

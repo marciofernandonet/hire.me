@@ -1,6 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const should = chai.should();
+const nanoid = require('nanoid');
 
 chai.use(chaiHttp);
 
@@ -19,7 +20,7 @@ chai.use(chaiHttp);
         
         it('Chamada com CUSTOM_ALIAS', done => {
             chai.request('http://localhost:3001')
-            .put('/create?url=http://www.vale.com&CUSTOM_ALIAS=vale_brasil')
+            .put(`/create?url=http://www.vale.com&CUSTOM_ALIAS=vale_brasil_${nanoid(7)}`)
             .end((err, res) => {
                 res.should.have.status(201);
                 res.body.should.be.a('object');

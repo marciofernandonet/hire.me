@@ -1,5 +1,5 @@
 const express = require('express');
-const Shorten = require('./controllers/ShortenController');
+const Shorten = require('../controllers/ShortenController');
 
 const routes = express.Router();
 

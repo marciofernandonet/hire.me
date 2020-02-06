@@ -1,5 +1,5 @@
 const nanoid = require('nanoid');
-const Shorten = require('../models/Shorten');
+const Shorten = require('../database/models/ShortenModel');
 
 module.exports = {
 
